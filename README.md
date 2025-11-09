@@ -1,8 +1,5 @@
 # 2b IMPLEMENTATION OF SLIDING WINDOW PROTOCOL
-## NAME : SUBASH M
-## REGISTER NUMBER : 212224220109
 ## AIM
-To write a python program to perform sliding window protocol
 ## ALGORITHM:
 1. Start the program.
 2. Get the frame size from the user
@@ -11,8 +8,9 @@ To write a python program to perform sliding window protocol
 5. If your frames reach the server it will send ACK signal to client
 6. Stop the Program
 ## PROGRAM
-### server:
-```python
+
+server.py
+```
 import socket
 s = socket.socket()
 s.bind(('localhost', 9999))
@@ -31,11 +29,10 @@ while True:
     conn.send(ack_message.encode())
 
 conn.close()  
-s.close()  
+s.close()
 ```
-
-### client:
-```python
+client.py
+```
 import socket
 c = socket.socket()
 c.connect(('localhost', 9999))
@@ -59,18 +56,10 @@ while True:
             i += s  
 
     break
-c.close()  
-
+c.close()
 ```
 ## OUPUT
 
-### server
-<img width="690" height="166" alt="image-1" src="https://github.com/user-attachments/assets/a4bf8018-ff95-4a35-b324-e73476c98a5b" />
-
-
-### client
-<img width="699" height="221" alt="image" src="https://github.com/user-attachments/assets/895a251b-3f5e-4ca2-bbfe-623d7454e4f5" />
-
-
+![alt text](image.png)
 ## RESULT
 Thus, python program to perform stop and wait protocol was successfully executed
